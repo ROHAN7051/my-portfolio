@@ -1,7 +1,25 @@
-
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { About } from "@/components/sections/About";
+import { Contact } from "@/components/sections/Contact";
+import { ExperienceSection } from "@/components/sections/Experience";
+import { Hero } from "@/components/sections/Hero";
+import { Projects } from "@/components/sections/Projects";
+import { Skills } from "@/components/sections/Skills";
 
 export default function Home() {
   return (
-   <div><p>This is the start of rohan sharma's portfolio</p></div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <ExperienceSection />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }

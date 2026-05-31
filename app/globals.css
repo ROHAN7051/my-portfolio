@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root,
+html.light {
+  --bg: #f0eee6;
+  --bg-card: #e8e6dc;
+  --bg-hover: #dedcd2;
+  --border: #d1cfc4;
+  --border-bright: #bfbcb2;
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --text-dim: #a8a29e;
+  --green: #15803d;
+  --blue: #1d4ed8;
+  --yellow: #a16207;
+  --purple: #6d28d9;
+  --cyan: #0e7490;
+  --red: #b91c1c;
+}
+
+html.dark {
+  --bg: #0a0a0a;
+  --bg-card: #141414;
+  --bg-hover: #1c1c1c;
+  --border: #262626;
+  --border-bright: #333333;
+  --text: #e5e5e5;
+  --text-secondary: #a3a3a3;
+  --text-dim: #636363;
+  --green: #4ade80;
+  --blue: #60a5fa;
+  --yellow: #facc15;
+  --purple: #c084fc;
+  --cyan: #22d3ee;
+  --red: #f87171;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bg: var(--bg);
+  --color-bg-card: var(--bg-card);
+  --color-bg-hover: var(--bg-hover);
+  --color-border: var(--border);
+  --color-border-bright: var(--border-bright);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-dim: var(--text-dim);
+  --color-green: var(--green);
+  --color-blue: var(--blue);
+  --color-yellow: var(--yellow);
+  --color-purple: var(--purple);
+  --color-cyan: var(--cyan);
+  --color-red: var(--red);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.2);
 }
